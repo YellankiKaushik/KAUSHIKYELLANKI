@@ -21,8 +21,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
 
-  // ✅ KEY FIX:
-  // Use base path ONLY in production (GitHub Pages)
+  // ✅ GitHub Pages base path (ONLY for production)
   base: mode === "production" ? "/KAUSHIKYELLANKI/" : "/",
 
   build: {
