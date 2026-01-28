@@ -34,6 +34,11 @@ const HeroSection = () => {
                   href: "https://drive.google.com/file/d/1Ic2G3_YzpVyM4hJeT3S7Bg33jSfaWtOj/view?usp=sharing",
                 },
                 {
+                  Icon: Mail,
+                  text: "Resume",
+                  href: "https://drive.google.com/file/d/10KRZTdl8WsUCd-Vi8oT5n4CiLhZ5DDqh/view?usp=sharing",
+                },
+                {
                   Icon: Linkedin,
                   text: "LinkedIn",
                   href: "https://www.linkedin.com/in/yellankikaushik/",
