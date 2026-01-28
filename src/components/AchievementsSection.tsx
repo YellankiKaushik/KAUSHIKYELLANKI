@@ -10,8 +10,15 @@ const achievements = [
     link: "https://github.com/YellankiKaushik/AI_Diagnosis_Prediction_System",
   },
   {
-    title: "YouTube Sentiment Analysis Platform",
+    title: "Hackathon Organizer — Google Crowdsource",
     year: "2024",
+    description:
+      "Organized and coordinated a community hackathon as part of the Google Crowdsource platform, enabling participants to contribute to real-world language and AI datasets while fostering collaboration and problem-solving.",
+    link: "https://crowdsource.google.com/",
+  },
+  {
+    title: "YouTube Sentiment Analysis Platform",
+    year: "2025",
     description:
       "Designed and documented a full-stack AI platform that analyzes YouTube comments to extract sentiment insights and engagement trends, enabling data-driven content analysis and decision-making.",
     link: "https://yellankikaushik.github.io/",
@@ -20,7 +27,10 @@ const achievements = [
 
 const AchievementsSection = () => {
   return (
-    <section className="py-12 px-4 relative overflow-hidden">
+    <section
+      id="achievements"
+      className="py-12 px-4 relative overflow-hidden"
+    >
       {/* Background */}
       <motion.div
         className="absolute inset-0 bg-gradient-dark opacity-5"
