@@ -132,7 +132,7 @@ const ExperienceSection = () => {
                     ) : (
                     <Github className="w-4 h-4" />
                     )}
-                    Tap to see
+                    View Work
 
                   </a>
                 </div>
