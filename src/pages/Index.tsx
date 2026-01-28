@@ -3,7 +3,6 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
-import PositionOfResponsibilitySection from "@/components/PositionOfResponsibilitySection";
 import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -47,10 +46,6 @@ const Index = () => {
         
         <section id="certifications">
           <CertificationsSection />
-        </section>
-
-        <section id="position-of-responsibility">
-          <PositionOfResponsibilitySection />
         </section>
 
         <section id="achievements">

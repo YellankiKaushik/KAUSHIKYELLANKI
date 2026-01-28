@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { Calendar, Github } from "lucide-react";
+import { Calendar, Instagram, Github } from "lucide-react";
+
 import edunetLogo from "../assets/logos/edunet-logo.png";
+import crowdsourceLogo from "../assets/logos/crowdsourcevbit.jpg";
+import aashayLogo from "../assets/logos/Aashayvbit.jpg";
 
 const experiences = [
   {
@@ -11,14 +14,37 @@ const experiences = [
       "Built a full-stack AI-driven analytics platform to convert unstructured YouTube comments into actionable sentiment insights. Designed end-to-end pipelines covering data extraction, NLP-based sentiment classification, AI summarization, and interactive dashboards. Gained hands-on experience with real-world datasets, API-driven system design, and AI-powered decision support systems under an industry-aligned program in collaboration with Microsoft & SAP.",
     projectLink:
       "https://github.com/YellankiKaushik/AI_Diagnosis_Prediction_System",
+    linktype: "github",
     logo: edunetLogo,
+  },
+  {
+    title: "Marketing Associate",
+    company: "Google Crowdsource VBIT",
+    period: "2023 – 2024",
+    description:
+      "Owned event growth as a product by defining audience acquisition strategy and execution roadmap, resulting in a 45–50% increase in participant adoption across multiple technology workshops. Leveraged data-backed promotions and community-driven outreach to scale engagement.",
+    projectLink:
+      "https://www.instagram.com/p/CstD5DVRwvl/?hl=en&img_index=1",
+    linktype: "instagram",
+    logo: crowdsourceLogo,
+  },
+  {
+    title: "Social Media & Promotions Associate",
+    company: "Aashay VBIT",
+    period: "2023 – 2024",
+    description:
+      "Planned and executed multi-platform social media campaigns as structured growth experiments, increasing digital reach and event discovery by 50–60%. Owned the full content lifecycle including ideation, creation, distribution, and performance analysis.",
+    projectLink:
+      "https://www.instagram.com/p/CxVLnPTRs0a/?hl=en&img_index=4",
+      linktype: "instagram",
+      logo: aashayLogo,
   },
 ];
 
 const ExperienceSection = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
-      {/* Subtle background elements */}
+      {/* Background elements */}
       <motion.div
         className="absolute inset-0 bg-gradient-dark opacity-5"
         initial={{ opacity: 0 }}
@@ -70,7 +96,7 @@ const ExperienceSection = () => {
                 <div className="p-3 bg-white/90 rounded-xl border border-white/30 shadow-lg">
                   <img
                     src={experience.logo}
-                    alt="Edunet Foundation logo"
+                    alt={`${experience.company} logo`}
                     className="w-8 h-8 object-contain"
                   />
                 </div>
@@ -101,8 +127,13 @@ const ExperienceSection = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-primary-light hover:text-white text-sm font-medium transition-colors"
                   >
+                    {experience.linktype === "instagram" ? (
+                      <Instagram className="w-4 h-4" />
+                    ) : (
                     <Github className="w-4 h-4" />
-                    View Project on GitHub
+                    )}
+                    View Work
+
                   </a>
                 </div>
               </div>
