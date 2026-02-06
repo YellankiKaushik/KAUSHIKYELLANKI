@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 import youtubeImg from "../assets/logos/youtube.png";
 import vaaniplanImg from "../assets/logos/vaaniplan.png";
 import gymImg from "../assets/logos/gym.png";
-import Tab from "../assets/logos/tab.png";
+import TabImg from "../assets/logos/tab.png";
 
 const projects = [
   {
@@ -41,7 +41,7 @@ const projects = [
     title: "Public Interest Analysis of Google Products",
     description:
       "A public interest analysis of Google products using Tableau, Google Trends, and data cleaning.",
-    image: Tab,
+    image: TabImg,
     link: "https://public.tableau.com/app/profile/yellanki.kaushik/viz/PublicInterestAnalysisofGoogleProducts/Dashboard2",
     tags: [ "Tableau", "Google Trends", "Data Cleaning", "Data Visualization"],
   },
