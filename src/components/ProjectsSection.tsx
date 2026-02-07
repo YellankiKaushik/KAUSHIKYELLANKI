@@ -10,7 +10,7 @@ const projects = [
   {
     title: "Integrated Review of YouTube Videos – Sentiment Analysis using AI",
     description:
-      "Designed and implemented an end-to-end AI-driven system to address the challenge of analyzing large volumes of unstructured YouTube comments bybuilding a Flask-based backend that fetches comments via the YouTube Data API and classifies sentiment (positive, negative, neutral) using transformer-based NLP models, enabling rapid insight generation from raw audience feedback. Developed a responsive Next.js dashboard with interactive visualizations and integrated OpenAI-powered summarization APIs, reducing manual comment review effort by an estimated 70%+ and enabling analysis of thousands of comments within minutes, significantly improving decision-making speed for content strategy and audience engagement.",
+      "Built an AI-powered review intelligence system that transforms thousands of YouTube comments into actionable sentiment insights and summaries, reducing manual review effort by 70%+ and accelerating content and marketing decisions.",
     image: youtubeImg,
     link: "https://github.com/YellankiKaushik/Integrated-Review-YT-Videos",
     tags: [
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "VaaniPlan — Voice-First AI Daily Planning Assistant",
     description:
-      "Designed and built a voice-first AI planning system to reduce cognitive and interaction friction in daily planning by enabling natural speech input and LLM-based reasoning, cutting manual typing and formatting effort by an estimated 60–70% while converting unstructured speech into structured, time-based schedules. Implemented an end-to-end architecture with a lightweight frontend and FastAPI backend integrated with large language models, improving planning workflow efficiency by approximately 50% compared to text-first tools and delivering a scalable prototype accepted for the Unleash LLM Innovation Challenge.",
+      "Created a voice-first AI planning prototype that eliminates typing and manual task structuring by using LLM reasoning, reducing planning effort by 60–70%, improving efficiency by ~50%, and earning acceptance in the Unleash LLM Innovation Challenge.",
     image: vaaniplanImg,
     link: "https://yellankikaushik.github.io/VaaniPlan/",
     tags: ["FastAPI", "LLMs", "Web Speech API", "AI Assistants"],
@@ -32,7 +32,7 @@ const projects = [
   {
     title: "Gym Membership Management System",
     description:
-      "Designed and deployed a production-oriented, serverless membership management system to replace manual spreadsheet tracking in small gyms, automating 100% of membership expiry calculations (active/expired status, remaining days) and reducing administrative tracking effort by approximately 65–70%. Implemented an automated, admin-only email alert engine for upcoming and missed renewals using Google Apps Script triggers, enabling proactive follow-ups that reduced missed renewals and potential revenue leakage by an estimated 30–40%, while delivering a zero-cost, secure solution suitable for real-world small business use.",
+      "Created a zero-cost, production-ready membership management system that replaces manual tracking with automated expiry alerts, reducing admin effort by 65–70% and preventing 30–40% of missed renewals for small gyms.",
     image: gymImg,
     link: "https://github.com/YellankiKaushik/Gym-Membership",
     tags: ["PHP", "MySQL", "Web Application", "Admin Systems"],
@@ -40,7 +40,7 @@ const projects = [
   {
     title: "Public Interest Analysis of Google Products",
     description:
-      "Analyzed multi-year Google Trends time-series data to evaluate public interest, stability, and growth across major Google products by consolidating and standardizing datasets, and designing an executive-style Tableau dashboard to enable comparative, insight-driven analysis. Identified that YouTube and Google Search contributed approximately 65–70% of overall average public interest, while Gemini demonstrated 30%+ relative growth over the last 12 months, highlighting emerging AI momentum and delivering actionable insights through a published interactive Tableau Public dashboard.",
+      "Created an interactive Tableau dashboard that translates Google Trends data into clear product insights, showing 65–70% sustained interest in YouTube and Search and 30%+ emerging growth in Gemini.",
     image: TabImg,
     link: "https://public.tableau.com/app/profile/yellanki.kaushik/viz/PublicInterestAnalysisofGoogleProducts/Dashboard2",
     tags: [ "Tableau", "Google Trends", "Data Cleaning", "Data Visualization"],

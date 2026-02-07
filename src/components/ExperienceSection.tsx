@@ -11,7 +11,7 @@ const experiences = [
     company: "Tech Saksham Program (Edunet Foundation)",
     period: "Feb 2025 – Mar 2025",
     description:
-      "Developed an AI-driven disease prediction system to address the need for early and accurate medical insights by training machine learning models on large-scale healthcare datasets, allowing users to input patient data and receive predictive disease outcomes.Built and deployed an end-to-end ML pipeline using Python, Pandas, and Scikit-learn with a Flask-based web interface, achieving a 18% improvement in prediction accuracy over traditional baseline approaches and improving the efficiency of preliminary diagnostic support.",
+      "Built an AI-driven disease prediction system that analyzes patient data using a trained ML pipeline and Flask-based web interface, achieving an 18% improvement in diagnostic accuracy over traditional baseline methods.",
     projectLink:
       "https://github.com/YellankiKaushik/AI_Diagnosis_Prediction_System",
     linktype: "github",
