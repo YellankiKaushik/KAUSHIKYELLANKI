@@ -12,6 +12,14 @@ const experiences = [
     period: "Feb 2025 – Mar 2025",
     description:
       "Built an AI-driven disease prediction system that analyzes patient data using a trained ML pipeline and Flask-based web interface, achieving an 18% improvement in diagnostic accuracy over traditional baseline methods.",
+    skills: [
+      "Machine Learning",
+      "Python",
+      "Flask",
+      "Data Preprocessing",
+      "Model Evaluation",
+      "End-to-End ML Pipelines",
+    ],
     projectLink:
       "https://github.com/YellankiKaushik/AI_Diagnosis_Prediction_System",
     linktype: "github",
@@ -22,7 +30,18 @@ const experiences = [
     company: "Google Crowdsource VBIT",
     period: "2023 – 2024",
     description:
-      "Owned event growth as a product by defining audience acquisition strategy and execution roadmap, resulting in a 45–50% increase in participant adoption across multiple technology workshops. Leveraged data-backed promotions and community-driven outreach to scale engagement.",
+      "Led data-driven event marketing initiatives that grew campus event reach by 35–40% and increased repeat participation by ~25% through targeted promotions, word-of-mouth strategies, and cross-team collaboration.",
+    skills: [
+      "Growth Strategy",
+      "Content Promotion",
+      "Campaign Planning",
+      "Event Marketing Strategy",
+      "Audience Acquisition Engagement",
+      "Marketing ROI",
+      "Word-of-Mouth",
+      "Referral Marketing",
+      "Customer Retention",
+    ],
     projectLink:
       "https://www.instagram.com/p/CstD5DVRwvl/?hl=en&img_index=1",
     linktype: "instagram",
@@ -33,11 +52,18 @@ const experiences = [
     company: "Aashay VBIT",
     period: "2023 – 2024",
     description:
-      "Planned and executed multi-platform social media campaigns as structured growth experiments, increasing digital reach and event discovery by 50–60%. Owned the full content lifecycle including ideation, creation, distribution, and performance analysis.",
+      "Managed end-to-end social media promotions, increasing audience reach and engagement by 40–50% and improving engagement efficiency by 25–30% through content optimization, campaign execution, and performance analysis.",
+    skills: [
+      "Social Media Strategy",
+      "Content Lifecycle Management",
+      "Campaign Analytics",
+      "Brand Promotion",
+      "Audience Engagement",
+    ],
     projectLink:
       "https://www.instagram.com/p/CxVLnPTRs0a/?hl=en&img_index=4",
-      linktype: "instagram",
-      logo: aashayLogo,
+    linktype: "instagram",
+    logo: aashayLogo,
   },
 ];
 
@@ -121,6 +147,20 @@ const ExperienceSection = () => {
                     {experience.description}
                   </p>
 
+                  {/* ✅ Skills */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {experience.skills.map((skill, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 text-xs rounded-full
+                                   bg-gradient-neon/20 text-accent-light
+                                   border border-accent/30"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
                   <a
                     href={experience.projectLink}
                     target="_blank"
@@ -130,7 +170,7 @@ const ExperienceSection = () => {
                     {experience.linktype === "instagram" ? (
                       <Instagram className="w-4 h-4" />
                     ) : (
-                    <Github className="w-4 h-4" />
+                      <Github className="w-4 h-4" />
                     )}
                     View Work
                   </a>
