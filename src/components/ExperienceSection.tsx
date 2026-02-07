@@ -65,6 +65,8 @@ const experiences = [
   },
 ];
 
+
+
 const ExperienceSection = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
