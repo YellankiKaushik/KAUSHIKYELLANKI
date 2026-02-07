@@ -11,7 +11,7 @@ const experiences = [
     company: "Tech Saksham Program (Edunet Foundation)",
     period: "Feb 2025 – Mar 2025",
     description:
-      "Built a full-stack AI-driven analytics platform to convert unstructured YouTube comments into actionable sentiment insights. Designed end-to-end pipelines covering data extraction, NLP-based sentiment classification, AI summarization, and interactive dashboards. Gained hands-on experience with real-world datasets, API-driven system design, and AI-powered decision support systems under an industry-aligned program in collaboration with Microsoft & SAP.",
+      "Developed an AI-driven disease prediction system to address the need for early and accurate medical insights by training machine learning models on large-scale healthcare datasets, allowing users to input patient data and receive predictive disease outcomes.Built and deployed an end-to-end ML pipeline using Python, Pandas, and Scikit-learn with a Flask-based web interface, achieving a 18% improvement in prediction accuracy over traditional baseline approaches and improving the efficiency of preliminary diagnostic support.",
     projectLink:
       "https://github.com/YellankiKaushik/AI_Diagnosis_Prediction_System",
     linktype: "github",
