@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, Instagram, Github } from "lucide-react";
-
+import { Calendar, Instagram, Github, ExternalLink } from "lucide-react";
 import edunetLogo from "../assets/logos/edunet-logo.png";
 import crowdsourceLogo from "../assets/logos/crowdsourcevbit.jpg";
 import aashayLogo from "../assets/logos/Aashayvbit.jpg";
