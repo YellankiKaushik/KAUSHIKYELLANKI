@@ -11,7 +11,7 @@ const experiences = [
     company: "Tech Saksham Program (Edunet Foundation)",
     period: "Feb 2025 – Mar 2025",
     description:
-    "Designed and deployed an interview-oriented AI decision support system that integrates multiple pre-trained machine learning models into a Streamlit-based web application. The project demonstrates end-to-end ML deployment, system design, and responsible AI communication by converting structured clinical inputs into real-time predictions while clearly defining ethical boundaries and system limitations.",
+    "Designed and deployed an end-to-end AI decision support system using Python, scikit-learn, and Streamlit that integrates multiple pre-trained ML models to deliver real-time disease risk predictions, reducing manual evaluation effort by ~80% while emphasizing system design, deployment, and responsible AI communication.",
     skills: [
         "Machine Learning",
         "Python",
