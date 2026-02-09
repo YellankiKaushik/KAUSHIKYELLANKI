@@ -11,8 +11,8 @@ const experiences = [
     company: "Tech Saksham Program (Edunet Foundation)",
     period: "Feb 2025 – Mar 2025",
     description:
-      "Built an AI-driven disease prediction system that analyzes patient data using a trained ML pipeline and Flask-based web interface, achieving an 18% improvement in diagnostic accuracy over traditional baseline methods.",
-      skills: [
+    "Designed and deployed an interview-oriented AI decision support system that integrates multiple pre-trained machine learning models into a Streamlit-based web application. The project demonstrates end-to-end ML deployment, system design, and responsible AI communication by converting structured clinical inputs into real-time predictions while clearly defining ethical boundaries and system limitations.",
+    skills: [
         "Machine Learning",
         "Python",
         "scikit-learn",
