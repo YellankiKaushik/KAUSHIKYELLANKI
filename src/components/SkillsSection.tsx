@@ -73,7 +73,6 @@ const skills = [
       "Analytical Thinking",
       "Structured Problem Solving & Communication",
       "Data-Driven Decision Making",
-      "Analytical Thinking",
        "Problem Solving",
         "Product Thinking",
           "Data Interpretation",
