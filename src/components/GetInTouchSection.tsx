@@ -28,7 +28,6 @@ const GetInTouchSection = () => {
   return (
     <section className="py-8 md:py-10 px-4 relative overflow-hidden">
 
-      {/* Same subtle overlay as certifications */}
       <motion.div
         className="absolute inset-0 bg-gradient-cyber opacity-8"
         initial={{ opacity: 0 }}
@@ -39,20 +38,22 @@ const GetInTouchSection = () => {
 
       <div className="container mx-auto max-w-5xl relative z-10">
 
-        {/* Same heading style */}
+        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-2xl md:text-3xl font-bold text-white mb-8 text-center text-glow"
+          className="text-2xl md:text-3xl font-bold text-white mb-3 text-center text-glow"
         >
           Get in Touch
         </motion.h2>
 
-        {/* Horizontal compact layout */}
+        {/* 🔹 Added Line */}
+        <p className="text-center text-white/80 text-sm md:text-base font-semibold mb-8">
+  Let’s connect and create something impactful together.
+</p>
         <div className="flex flex-wrap justify-center gap-4">
-
           {contacts.map((item, index) => (
             <motion.a
               key={index}
@@ -82,7 +83,6 @@ const GetInTouchSection = () => {
               </span>
             </motion.a>
           ))}
-
         </div>
       </div>
     </section>
