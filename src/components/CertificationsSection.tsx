@@ -74,7 +74,7 @@ const certifications = [
 
 const slideVariants = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 150 : -150,
+    x: direction > 0 ? 200 : -200,
     opacity: 0,
   }),
   center: {
@@ -82,13 +82,14 @@ const slideVariants = {
     opacity: 1,
   },
   exit: (direction: number) => ({
-    x: direction > 0 ? -150 : 150,
+    x: direction > 0 ? -200 : 200,
     opacity: 0,
   }),
 };
 
 const CertificationsSection = () => {
-  const [[page, direction], setPage] = useState([0, 0]);
+  const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
+
   const totalPages = Math.ceil(certifications.length / ITEMS_PER_PAGE);
 
   const paginate = (newDirection: number) => {
@@ -128,7 +129,8 @@ const CertificationsSection = () => {
           Professional Certifications
         </motion.h2>
 
-        <div className="relative min-h-[420px] overflow-hidden">
+        <div className="relative min-h-[420px]">
+
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={page}
@@ -137,8 +139,18 @@ const CertificationsSection = () => {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ type: "spring", stiffness: 90, damping: 18 }}
-              className="grid sm:grid-cols-2 gap-6"
+              transition={{ type: "spring", stiffness: 100, damping: 20 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.3}
+              onDragEnd={(e, info) => {
+                if (info.offset.x < -120) {
+                  paginate(1);
+                } else if (info.offset.x > 120) {
+                  paginate(-1);
+                }
+              }}
+              className="grid sm:grid-cols-2 gap-6 cursor-grab active:cursor-grabbing"
             >
               {pageData.map((cert, index) => (
                 <motion.a
@@ -179,7 +191,7 @@ const CertificationsSection = () => {
             <ChevronRight className="text-white w-5 h-5" />
           </button>
 
-          {/* Dots Indicator */}
+          {/* Dots */}
           <div className="flex justify-center items-center gap-3 mt-10">
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
