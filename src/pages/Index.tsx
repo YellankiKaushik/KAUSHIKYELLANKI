@@ -7,7 +7,9 @@ import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import SkillsSection from "@/components/SkillsSection";
 import AchievementsSection from "@/components/AchievementsSection";
-import FeaturedInSection from "@/components/FeaturedInSection"; 
+import FeaturedInSection from "@/components/FeaturedInSection";
+import GetInTouchSection from "@/components/GetInTouchSection";   // ✅ ADD THIS
+
 const Index = () => {
   return (
     <>
@@ -24,9 +26,8 @@ const Index = () => {
         </section>
 
         <section id="FeaturedInSection">
-          <FeaturedInSection/>
+          <FeaturedInSection />
         </section>
-
 
         <section id="experience">
           <ExperienceSection />
@@ -43,13 +44,18 @@ const Index = () => {
         <section id="education">
           <EducationSection />
         </section>
-        
+
         <section id="certifications">
           <CertificationsSection />
         </section>
 
         <section id="achievements">
           <AchievementsSection />
+        </section>
+
+        {/* ✅ NEW SECTION */}
+        <section id="contact">
+          <GetInTouchSection />
         </section>
       </motion.div>
     </>
