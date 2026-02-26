@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Linkedin } from "lucide-react";
+import { FileText, Linkedin, Mail } from "lucide-react";
 import profileImage from "@/assets/profile.jpeg";
 
 const HeroSection = () => {
@@ -38,6 +38,11 @@ const HeroSection = () => {
                   Icon: Linkedin,
                   text: "LinkedIn",
                   href: "https://www.linkedin.com/in/yellankikaushik/",
+                },
+                {
+                  Icon: Mail,
+                  text: "Email",
+                  href: "mailto:kaushikyellanki@gmail.com",
                 },
               ].map(({ Icon, text, href }, index) => (
                 <a
