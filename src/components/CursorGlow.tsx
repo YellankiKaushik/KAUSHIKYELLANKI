@@ -1,9 +1,28 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CursorGlow = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    // Detect if device has a fine pointer (mouse/trackpad)
+    const mediaQuery = window.matchMedia("(pointer: fine)");
+    setIsDesktop(mediaQuery.matches);
+
+    const handleChange = () => {
+      setIsDesktop(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
+
     const cursor = cursorRef.current;
     if (!cursor) return;
 
@@ -13,11 +32,11 @@ const CursorGlow = () => {
     };
 
     const handleDown = () => {
-      cursor?.classList.add("scale-75");
+      cursor.classList.add("scale-75");
     };
 
     const handleUp = () => {
-      cursor?.classList.remove("scale-75");
+      cursor.classList.remove("scale-75");
     };
 
     window.addEventListener("mousemove", move);
@@ -29,7 +48,10 @@ const CursorGlow = () => {
       window.removeEventListener("mousedown", handleDown);
       window.removeEventListener("mouseup", handleUp);
     };
-  }, []);
+  }, [isDesktop]);
+
+  // If not desktop → render nothing
+  if (!isDesktop) return null;
 
   return (
     <div
