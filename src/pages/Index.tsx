@@ -8,7 +8,7 @@ import CertificationsSection from "@/components/CertificationsSection";
 import SkillsSection from "@/components/SkillsSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import FeaturedInSection from "@/components/FeaturedInSection";
-import GetInTouchSection from "@/components/GetInTouchSection";   // ✅ ADD THIS
+import GetInTouchSection from "@/components/GetInTouchSection";
 
 const Index = () => {
   return (

@@ -3,7 +3,7 @@
 🚀 Personal portfolio website showcasing my work, focused on building intelligent and real-world business impact.
 
 🔗 **Live Portfolio**  
-👉 https://yellankikaushik.github.io/KAUSHIKYELLANKI/
+👉 https://yellankikaushik.github.io/KAUSHIK/
 
 ---
 

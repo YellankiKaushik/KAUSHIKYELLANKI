@@ -6,7 +6,7 @@ const education = [
     degree: "Bachelor of Technology in Computer Science and Engineering",
     school: "Vignana Bharathi Institute of Technology (VBIT)",
     period: "2021 – 2025",
-    gpa: "7.79 / 10.0",
+    gpa: "7.79 / 10.0 SGPA ",
     description:
       "Undergraduate program with a strong foundation in Computer Science, Artificial Intelligence, Machine Learning, and Data Analytics. Gained hands-on experience through academic projects focused on AI-driven systems and full-stack development.",
     coursework: [
