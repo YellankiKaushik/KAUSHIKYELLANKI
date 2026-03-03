@@ -10,6 +10,13 @@ const achievements = [
     link: "https://github.com/YellankiKaushik/AI_Diagnosis_Prediction_System",
   },
   {
+    title: "Blog on Abundance of Space Theory",
+    year: "2026",
+    description:
+        "Wrote a blog on the Abundance of Space Theory by Myself",
+    link: "https://medium.com/@kaushikyellanki/the-abundance-of-space-theory-527f54a9c0ca",
+  },
+  {
     title: "Hackathon Organizer — Google Crowdsource",
     year: "2023",
     description:
