@@ -17,7 +17,7 @@ const achievements = [
     link: "https://medium.com/@kaushikyellanki/the-abundance-of-space-theory-527f54a9c0ca",
   },
   {
-    title: "Hackathon Organizer — Google Crowdsource",
+    title: "Hackathon Organizer — Google Crowdsource VBIT",
     year: "2023",
     description:
       "Organized and coordinated a community hackathon as part of the Google Crowdsource platform, enabling participants to contribute to real-world language and AI datasets while fostering collaboration and problem-solving.",
