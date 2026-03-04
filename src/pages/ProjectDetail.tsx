@@ -119,6 +119,7 @@ const ProjectDetail = () => {
 
       </div>
     </section>
+    
   );
 };
 
