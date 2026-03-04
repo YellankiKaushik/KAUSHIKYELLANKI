@@ -19,12 +19,11 @@ const ProjectDetail = () => {
   return (
     <section className="py-12 px-4 relative overflow-hidden">
 
-      {/* SAME BACKGROUND AS OTHER SECTIONS */}
+      {/* SAME BACKGROUND SYSTEM */}
       <motion.div
         className="absolute inset-0 bg-gradient-cyber opacity-10"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.1 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 0.1 }}
         transition={{ duration: 1.2 }}
       />
 
@@ -38,47 +37,178 @@ const ProjectDetail = () => {
           ← Back to Portfolio
         </button>
 
-        {/* MAIN CARD */}
+        {/* MAIN GLASS CARD */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="glass-card p-6 md:p-8 hover-glow"
+          className="glass-card p-8 hover-glow"
         >
 
-          {/* IMAGE */}
-          <img
-            src={project.image}
-            alt={project.title}
-            className="rounded-xl mb-6 w-full h-72 object-cover"
-          />
+          {/* HEADER */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
 
-          {/* TITLE */}
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            {project.title}
-          </h1>
+            <div className="flex items-center gap-4">
+
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-16 h-16 rounded-lg object-cover"
+              />
+
+              <h1 className="text-2xl md:text-3xl font-bold text-white">
+                {project.title}
+              </h1>
+
+            </div>
+
+            {/* TOP LINKS */}
+            <div className="flex gap-3">
+
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card px-4 py-2 hover-glow text-sm"
+                >
+                  GitHub
+                </a>
+              )}
+
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card px-4 py-2 hover-glow text-sm"
+                >
+                  Live Demo
+                </a>
+              )}
+
+            </div>
+
+          </div>
 
           {/* DESCRIPTION */}
-          <p className="text-white/80 leading-relaxed mb-6">
+          <p className="text-white/80 leading-relaxed mb-8">
             {project.description}
           </p>
 
-          {/* TAGS */}
-          <div className="flex flex-wrap gap-2 mb-8">
-            {project.tags.map((tag, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 text-xs rounded-full
-                bg-gradient-neon/20 text-accent-light
-                border border-accent/30"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          {/* HIGHLIGHTS */}
+          {project.highlights && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Key Achievements
+              </h2>
 
-          {/* LINKS */}
-          <div className="flex flex-wrap gap-4">
+              <ul className="list-disc list-inside text-white/80 space-y-2">
+                {project.highlights.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* TECH STACK */}
+          {project.techStack && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Tech Stack
+              </h2>
+
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-xs rounded-full
+                    bg-gradient-neon/20 text-accent-light
+                    border border-accent/30"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* OVERVIEW */}
+          {project.overview && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Project Overview
+              </h2>
+
+              <p className="text-white/80 leading-relaxed">
+                {project.overview}
+              </p>
+            </div>
+          )}
+
+          {/* PROBLEM */}
+          {project.problem && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Problem
+              </h2>
+
+              <p className="text-white/80 leading-relaxed">
+                {project.problem}
+              </p>
+            </div>
+          )}
+
+          {/* SOLUTION */}
+          {project.solution && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Solution
+              </h2>
+
+              <p className="text-white/80 leading-relaxed">
+                {project.solution}
+              </p>
+            </div>
+          )}
+
+          {/* RESULTS */}
+          {project.results && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Results
+              </h2>
+
+              <ul className="list-disc list-inside text-white/80 space-y-2">
+                {project.results.map((r, i) => (
+                  <li key={i}>{r}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* SCREENSHOTS GRID */}
+          {project.screenshots && (
+            <div className="mb-10">
+              <h2 className="text-xl font-semibold text-white mb-6">
+                Screenshots
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {project.screenshots.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt="project screenshot"
+                    className="rounded-xl hover-glow object-cover"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* BOTTOM LINKS */}
+          <div className="flex flex-wrap gap-4 pt-4">
 
             {project.github && (
               <a
@@ -119,7 +249,6 @@ const ProjectDetail = () => {
 
       </div>
     </section>
-    
   );
 };
 
