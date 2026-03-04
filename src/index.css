@@ -21,7 +21,7 @@ body{
 
 @layer utilities {
   .glass-card {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg rounded-xl;
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg rounded-xl transition-all duration-300;
   }
   
   .glass-nav {
@@ -37,7 +37,16 @@ body{
   }
   
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-glow;
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    transform: translateY(-4px) scale(1.01);
+  
+    box-shadow:
+      0 0 12px rgba(255, 138, 80, 0.35),
+      0 0 24px rgba(255, 107, 53, 0.25),
+      0 0 40px rgba(255, 138, 80, 0.15);
   }
   
   .text-gradient {

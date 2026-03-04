@@ -42,28 +42,19 @@ const ProjectDetail = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="glass-card p-8 hover-glow"
+          className="glass-card p-6 md:p-8 hover-glow"
         >
 
           {/* HEADER */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
 
-            <div className="flex items-center gap-4">
-
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-16 h-16 rounded-lg object-cover"
-              />
-
-              <h1 className="text-2xl md:text-3xl font-bold text-white">
-                {project.title}
-              </h1>
-
-            </div>
+            {/* TITLE */}
+            <h1 className="text-3xl md:text-4xl font-bold text-white text-glow">
+              {project.title}
+            </h1>
 
             {/* TOP LINKS */}
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
 
               {project.github && (
                 <a
@@ -92,13 +83,14 @@ const ProjectDetail = () => {
           </div>
 
           {/* DESCRIPTION */}
-          <p className="text-white/80 leading-relaxed mb-8">
+          <p className="text-white/80 leading-relaxed mb-10">
             {project.description}
           </p>
 
           {/* HIGHLIGHTS */}
           {project.highlights && (
             <div className="mb-10">
+
               <h2 className="text-xl font-semibold text-white mb-4">
                 Key Achievements
               </h2>
@@ -108,12 +100,14 @@ const ProjectDetail = () => {
                   <li key={i}>{item}</li>
                 ))}
               </ul>
+
             </div>
           )}
 
           {/* TECH STACK */}
           {project.techStack && (
             <div className="mb-10">
+
               <h2 className="text-xl font-semibold text-white mb-4">
                 Tech Stack
               </h2>
@@ -130,12 +124,14 @@ const ProjectDetail = () => {
                   </span>
                 ))}
               </div>
+
             </div>
           )}
 
           {/* OVERVIEW */}
           {project.overview && (
             <div className="mb-10">
+
               <h2 className="text-xl font-semibold text-white mb-4">
                 Project Overview
               </h2>
@@ -143,12 +139,14 @@ const ProjectDetail = () => {
               <p className="text-white/80 leading-relaxed">
                 {project.overview}
               </p>
+
             </div>
           )}
 
           {/* PROBLEM */}
           {project.problem && (
             <div className="mb-10">
+
               <h2 className="text-xl font-semibold text-white mb-4">
                 Problem
               </h2>
@@ -156,12 +154,14 @@ const ProjectDetail = () => {
               <p className="text-white/80 leading-relaxed">
                 {project.problem}
               </p>
+
             </div>
           )}
 
           {/* SOLUTION */}
           {project.solution && (
             <div className="mb-10">
+
               <h2 className="text-xl font-semibold text-white mb-4">
                 Solution
               </h2>
@@ -169,12 +169,14 @@ const ProjectDetail = () => {
               <p className="text-white/80 leading-relaxed">
                 {project.solution}
               </p>
+
             </div>
           )}
 
           {/* RESULTS */}
           {project.results && (
             <div className="mb-10">
+
               <h2 className="text-xl font-semibold text-white mb-4">
                 Results
               </h2>
@@ -184,31 +186,36 @@ const ProjectDetail = () => {
                   <li key={i}>{r}</li>
                 ))}
               </ul>
+
             </div>
           )}
 
-          {/* SCREENSHOTS GRID */}
+          {/* SCREENSHOTS */}
           {project.screenshots && (
-            <div className="mb-10">
+            <div className="mb-12">
+
               <h2 className="text-xl font-semibold text-white mb-6">
                 Screenshots
               </h2>
 
               <div className="grid md:grid-cols-2 gap-6">
+
                 {project.screenshots.map((img, i) => (
                   <img
                     key={i}
                     src={img}
                     alt="project screenshot"
-                    className="rounded-xl hover-glow object-cover"
+                    className="rounded-xl object-cover hover-glow"
                   />
                 ))}
+
               </div>
+
             </div>
           )}
 
           {/* BOTTOM LINKS */}
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap gap-4 pt-6 border-t border-white/10">
 
             {project.github && (
               <a
