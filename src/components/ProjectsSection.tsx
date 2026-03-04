@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import youtubeImg from "../assets/logos/youtube.png";
 import vaaniplanImg from "../assets/logos/vaaniplan.png";
@@ -8,11 +9,14 @@ import TabImg from "../assets/logos/tab.png";
 
 const projects = [
   {
+    slug: "youtube-review",
     title: "Integrated Review of YouTube Videos – Sentiment Analysis using AI",
     description:
       "Built an AI-powered review intelligence system that transforms thousands of YouTube comments into actionable sentiment insights and summaries, reducing manual review effort by 70%+ and accelerating content and marketing decisions.",
     image: youtubeImg,
-    link: "https://github.com/YellankiKaushik/Integrated-Review-YT-Videos",
+    github: "https://github.com/YellankiKaushik/Integrated-Review-YT-Videos",
+    live: "",
+    medium: "",
     tags: [
       "NLP",
       "Sentiment Analysis",
@@ -22,27 +26,36 @@ const projects = [
     ],
   },
   {
+    slug: "vaaniplan",
     title: "VaaniPlan — Voice-First AI Daily Planning Assistant",
     description:
       "Created a voice-first AI planning prototype that eliminates typing and manual task structuring by using LLM reasoning, reducing planning effort by 60–70%, improving efficiency by ~50%, and earning acceptance in the Unleash LLM Innovation Challenge.",
     image: vaaniplanImg,
-    link: "https://yellankikaushik.github.io/VaaniPlan/",
+    github: "",
+    live: "https://yellankikaushik.github.io/VaaniPlan/",
+    medium: "",
     tags: ["FastAPI", "LLMs", "Web Speech API", "AI Assistants"],
   },
   {
+    slug: "gym-membership",
     title: "Gym Membership Management System",
     description:
       "Created a zero-cost, production-ready membership management system that replaces manual tracking with automated expiry alerts, reducing admin effort by 65–70% and preventing 30–40% of missed renewals for small gyms.",
     image: gymImg,
-    link: "https://github.com/YellankiKaushik/Gym-Membership",
+    github: "https://github.com/YellankiKaushik/Gym-Membership",
+    live: "",
+    medium: "",
     tags: ["PHP", "MySQL", "Web Application", "Admin Systems"],
   },
   {
+    slug: "google-product-analysis",
     title: "Public Interest Analysis of Google Products",
     description:
       "Created an interactive Tableau dashboard that translates Google Trends data into clear product insights.",
     image: TabImg,
-    link: "https://public.tableau.com/app/profile/yellanki.kaushik",
+    github: "",
+    live: "https://public.tableau.com/app/profile/yellanki.kaushik",
+    medium: "",
     tags: ["Tableau", "Google Trends", "Data Visualization"],
   },
 ];
@@ -72,12 +85,12 @@ const ProjectsSection = () => {
           Projects
         </motion.h2>
 
-        {/* 🔥 Clean Responsive Grid */}
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
 
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.slug}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -85,7 +98,8 @@ const ProjectsSection = () => {
               whileHover={{ y: -4 }}
               className="glass-card p-6 hover-glow flex flex-col"
             >
-              {/* Image */}
+
+              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.title}
@@ -93,7 +107,7 @@ const ProjectsSection = () => {
                 className="rounded-xl mb-6 w-full h-48 object-cover"
               />
 
-              {/* Content */}
+              {/* Project Content */}
               <div className="flex flex-col flex-grow">
 
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-4">
@@ -104,7 +118,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                {/* Tags */}
+                {/* Tech Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, i) => (
                     <span
@@ -118,22 +132,21 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* CTA */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* View Project Button */}
+                <Link
+                  to={`/project/${project.slug}`}
                   className="inline-flex items-center gap-2 text-primary-light hover:text-white transition"
                 >
                   <ExternalLink className="w-4 h-4" />
                   View Project
-                </a>
+                </Link>
 
               </div>
             </motion.div>
           ))}
 
         </div>
+
       </div>
     </section>
   );
