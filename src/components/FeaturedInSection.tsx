@@ -5,7 +5,7 @@ const featuredHighlights = [
   {
     title: "About Me",
     description:
-      "I am a Computer Science undergraduate with a strong foundation in Artificial Intelligence, Machine Learning, and Data Analytics. I have experience building full-stack AI-driven analytics platforms and intelligent systems.",
+      "I am a Computer Science graduate with a strong foundation in Artificial Intelligence, Machine Learning, and Data Analytics. I have experience building full-stack AI-driven analytics platforms and intelligent systems.",
   },
   {
     title: "My Focus",
