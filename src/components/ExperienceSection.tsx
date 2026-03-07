@@ -3,8 +3,29 @@ import { Calendar, Instagram, Github, ExternalLink } from "lucide-react";
 import edunetLogo from "../assets/logos/edunet-logo.png";
 import crowdsourceLogo from "../assets/logos/crowdsourcevbit.jpg";
 import aashayLogo from "../assets/logos/Aashayvbit.jpg";
+import uptoskillsLogo from "../assets/logos/uptoskills.jpg";
 
 const experiences = [
+  {
+    title: "AI Research Intern",
+    company: "UptoSkills",
+    period: "Feb 2026 – Present",
+    description:
+    "Designing Backend Systems for Ai Interview",
+    skills: [
+        "Machine Learning",
+        "Python",
+        "scikit-learn",
+        "Streamlit",
+        "Model Deployment",
+        "API",
+        "System Design"
+      ],
+    projectLink:
+      "https://github.com/YellankiKaushik/YT-Integrated-Review---Kaushik",
+    linktype: "live",
+    logo: uptoskillsLogo,
+  },
   {
     title: "AI Engineer",
     company: "Tech Saksham Program (Edunet Foundation)",
