@@ -21,14 +21,21 @@ const achievements = [
     year: "2025",
     description:
       "Designed and documented a full-stack AI platform that analyzes YouTube comments to extract sentiment insights and engagement trends.",
-    link: "https://yellankikaushik.github.io/",
+    link: "https://github.com/YellankiKaushik/YT-Integrated-Review---Kaushik",
   },
   {
     title: "🌿The Abundance of Space Theory - Medium Blog",
     year: "2026",
     description:
-        "Wrote a blog on 🌿The Abundance of Space Theory on Medium",
+      "Wrote a blog on 🌿The Abundance of Space Theory on Medium",
     link: "https://medium.com/@kaushikyellanki/the-abundance-of-space-theory-bbc8a5314615",
+  },
+  {
+    title: "1M1B recognized my open source LLM Project for Building Real World Impact",
+    year: "2026",
+    description:
+      "Build an open source LLM project that makes use of unstructural thoughts into Structural plan",
+    link: "https://drive.google.com/file/d/170fFOFbElEn-t0khhUERrzq5OxOxutj_/view?usp=drive_link",
   },
 ];
 
