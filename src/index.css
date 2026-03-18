@@ -1,20 +1,22 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   cursor: none;
 }
+
 @layer base {
   body {
     @apply bg-background text-white/90 font-sans antialiased;
-    background-image: 
+    background-image:
       radial-gradient(circle at top left, rgba(255, 138, 80, 0.03), transparent 40%),
       linear-gradient(to bottom right, rgba(255, 107, 53, 0.05), transparent);
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply font-display font-bold tracking-tight;
   }
 }
@@ -23,74 +25,74 @@ body{
   .glass-card {
     @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-lg rounded-xl transition-all duration-300;
   }
-  
+
   .glass-nav {
     @apply backdrop-blur-xl bg-black/20 border border-white/10;
   }
-  
+
   .btn-cosmic {
     @apply bg-gradient-to-r from-primary to-accent text-white font-medium px-6 py-3 rounded-xl hover:shadow-neon transition-all duration-300;
   }
-  
+
   .hover-lift {
     @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
   }
-  
+
   .hover-glow {
     @apply transition-all duration-300;
   }
-  
+
   .hover-glow:hover {
     transform: translateY(-4px) scale(1.01);
-  
+
     box-shadow:
       0 0 12px rgba(255, 138, 80, 0.35),
       0 0 24px rgba(255, 107, 53, 0.25),
       0 0 40px rgba(255, 138, 80, 0.15);
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary-light to-accent-light bg-clip-text text-transparent;
   }
-  
+
   .text-glow {
     text-shadow: 0 0 20px rgba(255, 138, 80, 0.3);
   }
-  
+
   .floating {
     animation: floating 3s ease-in-out infinite;
   }
-  
+
   .progress-cosmic {
     @apply bg-gradient-to-r from-primary via-accent to-primary-light;
   }
-  
+
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-in-right {
     animation: slideInRight 0.8s ease-out forwards;
   }
-  
+
   .animate-zoom-in {
     animation: zoomIn 0.5s ease-out forwards;
   }
-  
+
   .blur-backdrop {
     backdrop-filter: blur(20px);
   }
-  
+
   .bg-gradient-cosmic {
     background: linear-gradient(135deg, rgb(255, 107, 53), rgb(255, 138, 80));
   }
-  
+
   .bg-gradient-neon {
     background: linear-gradient(135deg, rgb(255, 138, 80), rgb(255, 166, 77));
   }
-  
+
   .bg-gradient-cyber {
-    background: linear-gradient(180deg, rgb(255, 107, 53), rgb(255, 138, 80));
+    background: linear-gradient(180deg, rgb(255, 107, 53, 0.7), rgb(255, 138, 80, 0.7));
   }
 
   .line-clamp-2 {
@@ -109,18 +111,39 @@ body{
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 5px rgba(255, 138, 80, 0.3); }
-  50% { box-shadow: 0 0 20px rgba(255, 138, 80, 0.6), 0 0 30px rgba(255, 107, 53, 0.3); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 138, 80, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 138, 80, 0.6), 0 0 30px rgba(255, 107, 53, 0.3);
+  }
 }
 
 @keyframes floating {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes fadeInUp {
@@ -128,6 +151,7 @@ body{
     opacity: 0;
     transform: translate3d(0, 40px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -139,6 +163,7 @@ body{
     opacity: 0;
     transform: translate3d(100px, 0, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -150,6 +175,7 @@ body{
     opacity: 0;
     transform: scale3d(0.8, 0.8, 0.8);
   }
+
   to {
     opacity: 1;
     transform: scale3d(1, 1, 1);
@@ -161,6 +187,7 @@ body{
     height: 0;
     opacity: 0;
   }
+
   to {
     height: var(--radix-accordion-content-height);
     opacity: 1;
@@ -172,6 +199,7 @@ body{
     height: var(--radix-accordion-content-height);
     opacity: 1;
   }
+
   to {
     height: 0;
     opacity: 0;
@@ -183,6 +211,7 @@ body{
     opacity: 0;
     transform: translateY(10px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -194,6 +223,7 @@ body{
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateY(10px);
@@ -205,6 +235,7 @@ body{
     transform: scale(0.95);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -212,9 +243,12 @@ body{
 }
 
 @keyframes bounce-subtle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
