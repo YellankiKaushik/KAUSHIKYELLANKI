@@ -20,7 +20,7 @@ const contacts = [
   {
     label: "Resume",
     icon: <FileText className="w-4 h-4" />,
-    link: "https://drive.google.com/file/d/1IWYFiJezy0ozBBN1AJFAgt3xdaAP3FyP/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1pSLwvLu4iN0KS0HIX2HyHbGSi_30F17M/view?usp=drive_link",
   },
 ];
 
@@ -51,8 +51,8 @@ const GetInTouchSection = () => {
 
         {/* 🔹 Added Line */}
         <p className="text-center text-white/80 text-sm md:text-base font-semibold mb-8">
-  Let’s connect and create something impactful together.
-</p>
+          Let’s connect and create something impactful together.
+        </p>
         <div className="flex flex-wrap justify-center gap-4">
           {contacts.map((item, index) => (
             <motion.a

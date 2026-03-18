@@ -16,8 +16,8 @@ const HeroSection = () => {
             <motion.h1 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4 font-display leading-tight">
               Kaushik Yellanki
             </motion.h1>
-{/* Background */}
-           {/* <motion.h2 className="text-lg sm:text-xl md:text-2xl text-primary-light mb-6 font-sans font-light leading-relaxed">
+            {/* Background */}
+            {/* <motion.h2 className="text-lg sm:text-xl md:text-2xl text-primary-light mb-6 font-sans font-light leading-relaxed">
               AI Engineer and Data Analyst
             </motion.h2>
 
@@ -25,38 +25,38 @@ const HeroSection = () => {
               AI Engineer building intelligent, data-driven systems with real-world
               business impact.
             </motion.p> */}
-            
+
             <motion.div
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.2, duration: 0.4 }}
-  className="flex flex-wrap gap-3 justify-center md:justify-start"
->
-  {[
-    {
-      Icon: FileText,
-      text: "Resume",
-      href: "https://drive.google.com/file/d/1IWYFiJezy0ozBBN1AJFAgt3xdaAP3FyP/view?usp=drive_link",
-    },
-    {
-      Icon: Linkedin,
-      text: "LinkedIn",
-      href: "https://www.linkedin.com/in/yellankikaushik/",
-    },
-    {
-      Icon: Mail,
-      text: "Email",
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=kaushikyellanki@gmail.com",
-    },
-  ].map(({ Icon, text, href }, index) => (
-    <motion.a
-      key={index}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ y: -3, scale: 1.02 }}
-      transition={{ duration: 0.25 }}
-      className="
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.4 }}
+              className="flex flex-wrap gap-3 justify-center md:justify-start"
+            >
+              {[
+                {
+                  Icon: FileText,
+                  text: "Resume",
+                  href: "https://drive.google.com/file/d/1pSLwvLu4iN0KS0HIX2HyHbGSi_30F17M/view?usp=drive_link",
+                },
+                {
+                  Icon: Linkedin,
+                  text: "LinkedIn",
+                  href: "https://www.linkedin.com/in/yellankikaushik/",
+                },
+                {
+                  Icon: Mail,
+                  text: "Email",
+                  href: "https://mail.google.com/mail/?view=cm&fs=1&to=kaushikyellanki@gmail.com",
+                },
+              ].map(({ Icon, text, href }, index) => (
+                <motion.a
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -3, scale: 1.02 }}
+                  transition={{ duration: 0.25 }}
+                  className="
         glass-card
         px-4 py-2
         flex items-center gap-2
@@ -64,16 +64,16 @@ const HeroSection = () => {
         justify-center
         hover-glow
       "
-    >
-      <span className="text-primary-light">
-        <Icon className="w-4 h-4" />
-      </span>
-      <span className="text-white">
-        {text}
-      </span>
-    </motion.a>
-  ))}
-</motion.div>
+                >
+                  <span className="text-primary-light">
+                    <Icon className="w-4 h-4" />
+                  </span>
+                  <span className="text-white">
+                    {text}
+                  </span>
+                </motion.a>
+              ))}
+            </motion.div>
           </div>
 
           <motion.div className="order-1 md:order-2 flex justify-center mb-6 md:mb-0">
