@@ -121,7 +121,7 @@ const ExperienceDetail = () => {
           {experience.skills && (
             <div className="mb-10">
               <h2 className="text-xl font-semibold text-white mb-4">
-                Tech Stack 
+                Tech Stack
               </h2>
               <div className="flex flex-wrap gap-2">
                 {experience.skills.map((skill, i) => (
