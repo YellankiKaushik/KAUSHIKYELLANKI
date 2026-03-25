@@ -68,7 +68,7 @@ const certifications = [
   {
     title: "Deloitte Australia - Data Analytics Simulation",
     issuer: "Forage",
-    link: "https://www.theforage.com",
+    link: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_m3xGpZ3r6inch3q7C_1738957277947_completion_certificate.pdf",
   },
 ];
 
